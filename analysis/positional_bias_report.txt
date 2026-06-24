@@ -1,0 +1,19 @@
+--- REPORT ANALISI SENSIBILITÀ ORDINAMENTO (RAG vs ORACLE) ---
+Numero di casi identificati: 2
+
+ID DOMANDA: 9Kb98cMxaSvA
+DOMANDA: who came first in the great north run
+GROUND TRUTH: mo farah
+POSIZIONE ORIGINALE EVIDENZA (RAG): 1
+RISPOSTA FALLIMENTARE (RAG): Tony Blair
+RISPOSTA CORRETTA (ORACLE - Evidenza in pos. 0): Mo Farah
+------------------------------------------------------------
+
+ID DOMANDA: QROaFewY5XkA
+DOMANDA: who set the fires in little fires everywhere
+GROUND TRUTH: izzy
+POSIZIONE ORIGINALE EVIDENZA (RAG): 1
+RISPOSTA FALLIMENTARE (RAG): The Richardson Family
+RISPOSTA CORRETTA (ORACLE - Evidenza in pos. 0): Izzy
+------------------------------------------------------------
+

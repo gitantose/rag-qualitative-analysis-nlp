@@ -1,0 +1,27 @@
+1) Noisy or Irrilevant retrieved chunks can mislead the model?
+
+Yes, especially when they contain entities of th same type as correct answer. 
+
+6cMFY1k9RzLR -> Ha confuso due entità molto simili tra di loro, persone, parenti, che hanno fatto entrambe un ruolo in "who played the mom on lost in space" ma June Lockarth ha fatto un ruolo da protagonista, scritto esplicitamente nella prima sentence.
+	
+This example shows that even when the relevant chunk is retrieved and placed first, additional distracting chunks can still mislead the generator. The irrelevant chunk mentions Anne Lockhart, who is an actress and a person closely related to June Lockhart. Since both entities have the same surname and belong to the same semantic type, the model selected the wrong entity. Therefore, the issue is not retrieval absence, but context noise and entity confusion during generation.
+
+9vlDB8PI8kN1 -> Il modello ha risposto Bob Gaudio and Judy Parker perché ha confuso bass player con songwriters. Rumore forte perché sono persone legate alla stessa canzone. Risposta in 2 chunk differenti uno giusto e uno sbagliato, tuttavia confonde i ruoli e prende il nome sbagliato 
+
+jWMqhHPRF7nQ -> Il modello ha risposto Roberta Flack che ha reso famosa la canzone ma essa è stata scritta da Ewan MacColl, rumore generativo, persona saliente scambiata per la risposta corretta. Risposta nello stesso chunk (coretto) ma ha confuso le due persone. 
+
+
+# Context Ordering
+
+Non abbiamo dati che affermano o negano quello che abbiamo scritto nel report. 
+Noi sappiamo che su 200 samples, quando la correct chunk è in prima posizione (125 volte/200) l'accuracy è del 63% mentre quando è in posizione 1 e 2 (50/200) l'accuracy è del circa 60%. Per cui non possiamo affermare con certezza che sia vero il fatto che il modello risponde meglio se il gold chunk è in prima posizione. L'unico punto a nostor favore sono i 125 samples che a differenza degli altri rappresentano un sub set maggiore. 
+
+Ok ma nel report avete scritto una cosa ma qua ne state dicendo un altra perchè?
+
+# Dataset Ambiguity 
+
+DTlbcXeOAsT2 -> chiede chi è, il modello cerca una persona, la trova ma la risposta è una Nazione.
+
+Ms8VBqNxxnxY -> Chiede where, domanda generale, la correct chunk indica la nazione ma il modello risponde con la cittadina corretta, diversi layer di profondità a livello di significato della parola "where"
+
+kI08gAvmkT5u ->  Domanda generica, chiede who, ma non si capisce se vuole il nome dell'attore o il nome del personaggio. Il modello restituisce il modello del personaggio
