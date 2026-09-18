@@ -1,10 +1,10 @@
 .DS_Store
-        .venv/
-        venv/
-        __pycache__/
-        *.py[cod]
-        .ipynb_checkpoints/
-        *.pkl
-        *.pth
-        *.jsonl
-        *_cache.json
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.pkl
+*.pth
+*.jsonl
+*_cache.json
