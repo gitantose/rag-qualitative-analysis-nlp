@@ -1,17 +1,17 @@
 datasets
-        google
-        ipython
-        ipywidgets
-        jupyter
-        matplotlib
-        nltk
-        numpy
-        pandas
-        requests
-        scikit-learn
-        seaborn
-        sentence-transformers
-        spacy
-        torch
-        tqdm
-        transformers
+google
+ipython
+ipywidgets
+jupyter
+matplotlib
+nltk
+numpy
+pandas
+requests
+scikit-learn
+seaborn
+sentence-transformers
+spacy
+torch
+tqdm
+transformers
